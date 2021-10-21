@@ -1,0 +1,33 @@
+{
+  "name": "pixabay-js-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "build:css": "postcss ./public/tailwind.css -o src/css/styles.css",
+    "prod": "NODE_ENV=production postcss ./public/tailwind.css -o src/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandroquiroga/pixabay-js-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leandroquiroga/pixabay-js-api/issues"
+  },
+  "homepage": "https://github.com/leandroquiroga/pixabay-js-api#readme",
+  "devDependencies": {
+    "@tailwindcss/jit": "^0.1.18",
+    "autoprefixer": "^10.3.7",
+    "parcel": "^2.0.0",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1",
+    "tailwindcss": "^2.2.17",
+    "win-node-env": "^0.4.0"
+  },
+  "dependencies": {}
+}

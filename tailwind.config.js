@@ -11,10 +11,15 @@ module.exports = {
       width: {
         '120': '38rem'
       },
+      maxHeight: {
+        '3/4': '85vh' 
+      }
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }

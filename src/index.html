@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="w-screen bg-white 2xl:container mx-auto">
+        <div class=" bg-white 2xl:container mx-auto">
             <header class="flex justify-between h-14 p-3 font-open items-center">
                 <img src="./assets/img/pixabay_logo_003.jpg" alt="logo" class="w-32">
                 <nav class="grid grid-cols-1 gap-x-4 place-content-end 2xl:grid-cols-11 xl:grid-cols-11 lg:grid-cols-6">
@@ -97,31 +97,54 @@
                 </section>
             </header>
             <main>
-                <section class="z-0 overflow-hidden max-h-3/4 w-full">
+                <section class="z-0 overflow-hidden max-h-3/4">
                     <picture>
-                        <img src="./assets/img/banner.jpg" class="h-screen w-screen z-0" >
-                        <article class="container mx-auto absolute bottom-1/2 left-56  flex flex-row justify-center items-center w-2/3">
+                        <img src="./assets/img/banner.jpg" class="bg-contain" >
+                        <article class="container mx-auto p-2 absolute bottom-1/4 left-60  flex flex-row justify-center items-center w-2/3">
                             <div class="z-10">
-                                <h5 class="text-center text-white text-open text-5xl my-3 font-bold">Increíbles Imágenes Gratis Para Descargar</h5>
-                                <p class="text-center text-white text-open text-2xl my-3 font-semibold">Nuestro banco de imágenes tiene más de 1 millón de imágenes y videos compartidos por nuestra talentosa comunidad.</p>
-                                <form action="" id="formulario">
-                                    <div class="block bg-white p-2">
-                                        <button type="submit" class="relative top-2 left-3">
+                                <h5 class="text-center text-gray-100 text-open text-4xl my-3 font-bold">Increíbles Imágenes Gratis Para Descargar</h5>
+                                <p class="text-center text-gray-100 text-open text-xl my-3 font-semibold">Nuestro banco de imágenes tiene más de 1 millón de imágenes y videos compartidos por nuestra talentosa comunidad.</p>
+                                <div class="bg-white p-2 rounded-2xl">
+                                    <form action="" id="formulario" class="grid grid-cols-12">
+                                        <button type="submit" class="relative top-1 left-3 col-span-1 place-content-center">
                                             <img src="./assets/svg/search.svg" class="w-9">
                                         </button>
-                                        <input type="text" name="name" id="name" autofocus class="rounded font-open text-xl p-2 ml-6 border-none text-gray-600 w-3/4 focus-within:outline-none focus:border-white focus:ring-white focus:shadow-none focus:border-none focus-within:ring-offset-white focus:ring-offset-white " placeholder="Search images, vectors, videos and music">
-                                        <select name="select" id="select-option" class="form-select">
-                                            <option value="Imagenes">Imagenes</option>
-                                            <option value="Videos">Videos</option>
+                                        <input type="text" name="name" id="name" autofocus class="rounded col-span-9 font-open text-xl p-2 ml-6 border-none text-gray-600 w-120 focus-within:outline-none focus:border-white focus:ring-white focus:shadow-none focus:border-none focus-within:ring-offset-white focus:ring-offset-white " placeholder="Search images, vectors, videos and music">
+                                        <select name="select" id="select-option" class="form-select col-span-2 ml-3 mb-1 font-open text-base border-white focus-within:outline-none focus:border-white focus:ring-white focus:shadow-none focus:border-none focus-within:ring-offset-white focus:ring-offset-white ">
+                                            <option value="Imagenes" id="photo" class="bg-gray-700 text-white border-none">Imagenes</option>
+                                            <option value="Videos" id="video" class="bg-gray-700 text-white border-none">Videos</option>
                                         </select>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
+                                <div class="text-gray-100 font-open text-lg text-center">
+                                    <p class="cursor-pointer">Populares imagenes: halloween, flores, paisajes, fondos, familia, naturaleza, mujer, tecnologia</p>
+                                </div>
                             </div>
                         </article>
                     </picture>
                 </section>
             </main>
-            <footer></footer>
+            <footer class="flex flex-col justify-center items-center">
+                    <div class="flex justify-center items-center my-6">
+                        <input type="button" value="Descubre más" class="rounded-full p-3 text-white font-open cursor-pointer w-64 bg-green-600 hover:bg-green-500">
+                    </div>
+                    <div class="flex flex-col justify-center items-center my-6 w-3/4">
+                        <h1 class="font-open text-gray-600 text-2xl">Imágenes y videos gratuitos que puedes usar desde cualquier lugar</h1>
+                        <p class="font-open text-gray-600 text-base text-center"> 
+                            Pixabay es una comunidad dinámica de creativos que comparten imágenes y videos sin derechos de autor. 
+                            Todos los contenidos se publican bajo la Licencia Pixabay, que los hace seguros para usar sin pedir permiso o dar crédito al artista, 
+                            incluso con fines comerciales.
+                        </p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center my-6 w-3/4">
+                        <h1 class="font-open text-gray-600 text-2xl">Únase a Pixabay</h1>
+                        <p class="font-open text-gray-600 text-base text-center">
+                            Descargue fotografías y videos de archivo libres de regalías y comparta 
+                            sus propias imágenes con gente al rededor del mundo como dominio público.
+                        </p>
+                        <input type="button" value="Registrate ! Es gratis" class=" my-6 rounded-full p-3 text-white font-open cursor-pointer w-64 bg-green-600 hover:bg-green-500">
+                    </div>
+            </footer>
         </div>
         <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
         <script src="./js/index.js" type="module"></script>

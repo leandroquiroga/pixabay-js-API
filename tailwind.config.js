@@ -12,7 +12,7 @@ module.exports = {
         '120': '38rem'
       },
       maxHeight: {
-        '3/4': '85vh' 
+        '3/4': '90vh' 
       }
     },
   },

@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="w-full bg-white 2xl:container mx-auto">
+        <div class="w-screen bg-white 2xl:container mx-auto">
             <header class="flex justify-between h-14 p-3 font-open items-center">
                 <img src="./assets/img/pixabay_logo_003.jpg" alt="logo" class="w-32">
                 <nav class="grid grid-cols-1 gap-x-4 place-content-end 2xl:grid-cols-11 xl:grid-cols-11 lg:grid-cols-6">
@@ -97,13 +97,25 @@
                 </section>
             </header>
             <main>
-                <section class="z-0 overflow-hidden">
+                <section class="z-0 overflow-hidden max-h-3/4 w-full">
                     <picture>
                         <img src="./assets/img/banner.jpg" class="h-screen w-screen z-0" >
-                        <article class="container mx-auto absolute bottom-1/2 left-24  flex justify-center items-center">
+                        <article class="container mx-auto absolute bottom-1/2 left-56  flex flex-row justify-center items-center w-2/3">
                             <div class="z-10">
                                 <h5 class="text-center text-white text-open text-5xl my-3 font-bold">Increíbles Imágenes Gratis Para Descargar</h5>
                                 <p class="text-center text-white text-open text-2xl my-3 font-semibold">Nuestro banco de imágenes tiene más de 1 millón de imágenes y videos compartidos por nuestra talentosa comunidad.</p>
+                                <form action="" id="formulario">
+                                    <div class="block bg-white p-2">
+                                        <button type="submit" class="relative top-2 left-3">
+                                            <img src="./assets/svg/search.svg" class="w-9">
+                                        </button>
+                                        <input type="text" name="name" id="name" autofocus class="rounded font-open text-xl p-2 ml-6 border-none text-gray-600 w-3/4 focus-within:outline-none focus:border-white focus:ring-white focus:shadow-none focus:border-none focus-within:ring-offset-white focus:ring-offset-white " placeholder="Search images, vectors, videos and music">
+                                        <select name="select" id="select-option" class="form-select">
+                                            <option value="Imagenes">Imagenes</option>
+                                            <option value="Videos">Videos</option>
+                                        </select>
+                                    </div>
+                                </form>
                             </div>
                         </article>
                     </picture>

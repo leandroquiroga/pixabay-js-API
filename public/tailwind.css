@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.content{
+    @apply bg-white 2xl:container mx-auto;
+}
+.card-content{
+    @apply grid p-2 my-3 gap-5 place-content-center place-items-center 2xl:grid-cols-layout-1 lg:grid-cols-layout-2 md:grid-cols-layout-3 ;
+}

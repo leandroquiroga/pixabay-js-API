@@ -6,5 +6,28 @@
     @apply bg-white 2xl:container mx-auto;
 }
 .card-content{
-    @apply grid p-2 my-3 gap-5 place-content-center place-items-center 2xl:grid-cols-layout-1 lg:grid-cols-layout-2 md:grid-cols-layout-3 ;
+    @apply grid p-2 my-3 gap-5 place-content-center place-items-center 2xl:grid-cols-layout-1 lg:grid-cols-layout-2 sm:grid-cols-layout-3 ;
+}
+.card-info{
+    @apply bg-gradient-to-t from-black to-transparent cursor-pointer opacity-80 relative bottom-16 z-50;
+}
+.position{
+    @apply absolute inset-x-0 bottom-5;
+}
+
+.dir{
+    @apply flex justify-between py-1;
+}
+
+.tags{
+    @apply text-white font-open text-sm;
+}
+.smallStyles{
+    @apply flex justify-around items-center font-open text-xs ml-2 text-white cursor-pointer;
+}
+.styleSVG{
+    @apply ml-1 w-5 opacity-80;
+}
+.linkPagination{
+    @apply rounded-lg bg-green-400 cursor-pointer font-open text-white uppercase text-center p-2 w-8 mx-1 my-1 ;
 }

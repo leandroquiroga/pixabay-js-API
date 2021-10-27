@@ -22,6 +22,7 @@ module.exports = {
         'layout-1': 'repeat(4, minmax(275px, auto))',
         'layout-2': 'repeat(2, minmax(400px, auto))',
         'layout-3': 'repeat(1, minmax(75%, auto))',
+        'grid-rows-menu': 'repeat(auto-fit, minmax(300px, 1fr))'
        }
     },
   },

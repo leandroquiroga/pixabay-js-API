@@ -27,9 +27,9 @@
                     </div>
                     <div class="flex flex-row justify-around col-span-6">
                         <ul class="flex justify-between items-center mx-2">
-                            <div class=" hidden lg:flex flex-row justify-around mx-3">
+                            <div class=" hidden lg:flex flex-row justify-around mx-3" id="menu">
                                 <a class="text-black font-open mx-2 hover:text-gray-500 cursor-pointer">Explorar</a>
-                                <img src="./assets/svg/chevron_down.svg" alt="chevron-down" class="w-4 cursor-pointer" id="menu-options"> 
+                                <img src="./assets/svg/chevron_down.svg" alt="chevron-down" class="w-4 cursor-pointer" > 
                             </div>
                             <div class="hidden sm:inline-block divide-x mx-3">
                                 <a class="text-black font-open px-2 hover:text-gray-500 cursor-pointer">Iniciar sesión</a>
@@ -42,15 +42,66 @@
                                 <img src="./assets/svg/upload.svg" class="w-4" alt="upload">
                             </div>
                         </button>
-                        <div class="lg:invisible p-1 place-content-center col-span-1">
-                            <img src="./assets/svg/menu.svg" alt="menu" class="w-8">
+                        <div class="lg:invisible p-1 place-content-center col-span-1" id="menu-responsive">
+                            <img src="./assets/svg/menu.svg" alt="menu" class="w-8 cursor-pointer">
                         </div>
                     </div>
                 </nav>
                 
             <!-- Menu adicional -->
-                <section class=" hidden z-50 bg-gray-800 absolute top-14 left-1/3 mx-auto p-2 w-120 h-auto rounded-lg">
+                <section class=" hidden z-50 bg-gray-800 absolute top-14 left-1/3 mx-auto p-2 w-120 h-auto rounded-lg" id="menu-options" >
                     <div class="grid grid-cols-3 place-content-center divide-x ">
+                        <div class="p-1">
+                            <p class="font-open text-white font-medium text-center">Media</p>
+                            <div class="block p-1">
+                                <ul>
+                                    <li class="mb-4 hover:bg-gray-600 p-1"><a href="#" class="font-open text-gray-400 hover:text-white">Selección del Editor</a></li>
+                                    <li class="mb-4 hover:bg-gray-600 p-1"><a href="#" class="font-open text-gray-400 hover:text-white">Popular Imagenes</a></li>
+                                    <li class="mb-4 hover:bg-gray-600 p-1"><a href="#" class="font-open text-gray-400 hover:text-white">Popular Videos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="block p-1">
+                            <p class="font-open text-white font-medium text-center">Community</p>
+                            <ul>
+                                <li class="mb-4 hover:bg-gray-600 p-1"><a href="#" class="font-open text-gray-400 hover:text-white">Blog</a></li>
+                                <li class="mb-4 hover:bg-gray-600 p-1"><a href="#" class="font-open text-gray-400 hover:text-white">Foro</a></li>
+                                <li class="mb-4 hover:bg-gray-600 p-1"><a href="#" class="font-open text-gray-400 hover:text-white">Artista</a></li>
+                                <li class="mb-4 hover:bg-gray-600 p-1"><a href="#" class="font-open text-gray-400 hover:text-white">Cámaras</a></li>
+                            </ul>
+                        </div>
+                        <div class="block p-1">
+                            <p class="font-open text-white font-medium text-center">About</p>
+                            <ul class="border-b-2">
+                                <li class="mb-4 hover:bg-gray-600 p-1"><a href="#" class="font-open text-gray-400 hover:text-white">Preguntas Frecuentes</a></li>
+                                <li class="mb-4 hover:bg-gray-600 p-1"><a href="#" class="font-open text-gray-400 hover:text-white">Condiciones</a></li>
+                                <li class="mb-4 hover:bg-gray-600 p-1"><a href="#" class="font-open text-gray-400 hover:text-white">Privacidad</a></li>
+                                <li class="mb-4 hover:bg-gray-600 p-1"><a href="#" class="font-open text-gray-400 hover:text-white">Acerca de nosotros</a></li>
+                                <li class="mb-4 hover:bg-gray-600 p-1"><a href="#" class="font-open text-gray-400 hover:text-white">API</a></li>
+                                <li class="mb-4 hover:bg-gray-600 p-1 ">
+                                    <div class="flex items-center cursor-pointer ">
+                                        <ion-icon name="globe" class="font-semibold text-xl text-gray-400 hover:text-white"></ion-icon>
+                                        <a href="#" class="font-open text-gray-400 ml-2 hover:text-white">Idioma</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="divide-y">
+                                <ul class="inline-block p-2">
+                                    <a href="#" class="font-open ml-6 text-gray-400 hover:text-white"><ion-icon name="logo-facebook" class="font-semibold text-xl" ></ion-icon></a>
+                                    <a href="#" class="font-open ml-6 text-gray-400 hover:text-white"><ion-icon name="logo-twitter" class="font-semibold text-xl" ></ion-icon></a>
+                                    <a href="#" class="font-open ml-6 text-gray-400 hover:text-white"><ion-icon name="logo-instagram" class="font-semibold text-xl" ></ion-icon></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            <!-- Menu Mobile-->
+                <section class=" hidden z-50 bg-gray-800 absolute top-0 right-0 p-2 w-full h-screen" id="menu-mobile" >
+                    <div class="absolute top-3 right-5" id="menu-mobile-close">
+                        <img src="./assets/svg/close.svg" class="w-8 cursor-pointer">
+                    </div>
+                    <div class="grid grid-rows-menu place-content-center divide-y w-full">
                         <div class="p-1">
                             <p class="font-open text-white font-medium text-center">Media</p>
                             <div class="block p-1">
@@ -103,38 +154,39 @@
                         <div class="block absolute container mx-auto">
                             <h5 class="text-center text-gray-100 text-open my-3 text-3xl  font-bold 2xl:text-6xl xl:text-5xl md:text-4xl sm:text-3xl">Increíbles Imágenes Gratis Para Descargar</h5>
                             <p class="text-center text-gray-100 text-open my-3 font-semibold text-xl xl:text-3xl lg:text-xl ">Nuestro banco de imágenes tiene más de 1 millón de imágenes y videos compartidos por nuestra talentosa comunidad.</p>
-                            <div class="bg-white p-2 rounded-2xl w-11/12 mx-auto">
-                                <form action="" id="formulario" class="flex flex-row">
+                            <div class="bg-white p-2 rounded-2xl w-11/12 mx-auto" id="content-form">
+                                <form action="card-content" method="post" id="formulario" class="flex flex-row">
                                     <button type="submit" class="relative top-1 left-3 place-content-center w-10">
                                         <img src="./assets/svg/search.svg" class="w-9">
                                     </button>
-                                    <input type="text" name="name" id="name" autofocus class="rounded w-87  font-open text-xl p-2 ml-6 border-none text-gray-600  focus-within:outline-none focus:border-white focus:ring-white focus:shadow-none focus:border-none focus-within:ring-offset-white focus:ring-offset-white " placeholder="Search images, vectors, videos and music">
+                                    <input type="text" name="name" id="name" autofocus class="rounded w-87  font-open text-xl p-2 ml-6 border-none text-gray-600  focus-within:outline-none focus:border-white focus:ring-white focus:shadow-none focus:border-none focus-within:ring-offset-white focus:ring-offset-white " placeholder="coffe, montains, city, programming, etc">
                                     <select name="select" id="select-option" class="form-select ml-3 mb-1 w-32 font-open text-base border-white focus-within:outline-none focus:border-white focus:ring-white focus:shadow-none focus:border-none focus-within:ring-offset-white focus:ring-offset-white ">
-                                        <option value="Imagenes" id="photo" class="bg-gray-700 text-white border-none text-sm w-auto">Imagenes</option>
-                                        <option value="Videos" id="video" class="bg-gray-700 text-white border-none text-sm w-auto">Videos</option>
+                                        <option value="photo" id="photo" class="bg-gray-700 text-white border-none text-sm w-auto">Imagenes</option>
+                                        <option value="videos" id="video" class="bg-gray-700 text-white border-none text-sm w-auto">Videos</option>
                                     </select>
                                 </form>
                             </div>
+                            <div class="text-red-600 font-open font-semibold text-base text-center" id="err"></div>
                             <div class="text-gray-100 font-open text-lg text-center">
                                 <p class="cursor-pointer text-base">Populares imagenes: halloween, flores, paisajes, fondos, familia, naturaleza, mujer, tecnologia</p>
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="w-full p-2 flex flex-col justify-center items-center">
+                <section class="w-full p-2 flex flex-col justify-center items-center" id="cards">
                     <article class="card-content">  
                         <div class="content-img block h-64 w-full overflow-hidden">
                             <img src="./assets/img/apples-6674608_1920.jpg" alt="apple" class="w-full h-full z-0">
-                            <div class="h-1/4 bg-gradient-to-t from-black to-transparent cursor-pointer opacity-80 relative bottom-16 z-50">
-                                <div class="absolute inset-x-0 bottom-5 ">
-                                    <div class="flex justify-between py-1">
-                                        <p class="text-white font-open text-sm ">fruit apple</p>
+                            <div class="card-info h-1/4">
+                                <div class="position">
+                                    <div class="dir">
+                                        <p class="tags">fruit apple</p>
                                         <div class="flex justify-center">
-                                            <small id="likes" class="flex justify-around items-center font-open text-xs ml-2 text-white cursor-pointer"> 1
-                                                <img src="./assets/svg/thumb-up.svg" alt="" class="ml-1 w-5 opacity-80 ">
+                                            <small id="likes" class="smallStyles"> 1
+                                                <img src="./assets/svg/thumb-up.svg" alt="" class="styleSVG">
                                             </small>
-                                            <small id="comment" class="flex justify-around items-center font-open text-xs ml-2 text-white cursor-pointer"> 2
-                                                <img src="./assets/svg/coments.svg" alt="" class="ml-1 w-5 opacity-80">
+                                            <small id="comment" class="smallStyles"> 2
+                                                <img src="./assets/svg/coments.svg" alt="" class="styleSVG">
                                             </small>
                                             <img src="./assets/svg/heart.svg" alt="" class="ml-2 w-5 opacity-80 cursor-pointer">
                                         </div>
@@ -357,6 +409,15 @@
                         </div>
                     </article>
                 </section>
+
+            <!-- Spinner -->
+                <section class="container mx-auto p-2 flex justify-center">
+                    <img src="./assets/svg/tail-spin.svg" class="w-16 hidden" id="spinner">
+                </section>
+            <!-- Resultado de la busqueda -->
+                <section class="card-content" id="result" ></section>
+            <!-- Paginacion -->
+                <section class="flex flex-wrap justify-center items-center container mx-auto" id="pagination" ></section>
             </main>
             <footer class="flex flex-col justify-center items-center">
                     <div class="flex justify-center items-center my-6">
